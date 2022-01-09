@@ -1,13 +1,13 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.34.6.
 --
 -- see: https://github.com/sol/hpack
 
-name:           template
+name:           php-haskell
 version:        1.0.0
-homepage:       https://github.com/jappeace/template#readme
-bug-reports:    https://github.com/jappeace/template/issues
+homepage:       https://github.com/jappeace/php-haskell#readme
+bug-reports:    https://github.com/jappeace/php-haskell/issues
 author:         Jappie Klooster
 maintainer:     jappieklooster@hotmail.com
 copyright:      2020 Jappie Klooster
@@ -21,13 +21,13 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/jappeace/template
+  location: https://github.com/jappeace/php-haskell
 
 library
   exposed-modules:
       Template
   other-modules:
-      Paths_template
+      Paths_php_haskell
   hs-source-dirs:
       src
   default-extensions:
@@ -58,7 +58,7 @@ library
 executable exe
   main-is: exe.hs
   other-modules:
-      Paths_template
+      Paths_php_haskell
   hs-source-dirs:
       app
   default-extensions:
@@ -84,14 +84,14 @@ executable exe
   ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wredundant-constraints -Wincomplete-record-updates -Widentities -Wcpp-undef -fwarn-tabs -Wpartial-fields -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , template
+    , php-haskell
   default-language: Haskell2010
 
 test-suite unit
   type: exitcode-stdio-1.0
   main-is: Main.hs
   other-modules:
-      Paths_template
+      Paths_php_haskell
   hs-source-dirs:
       test
   default-extensions:
@@ -117,8 +117,8 @@ test-suite unit
   ghc-options: -Wall -Wcompat -Wincomplete-uni-patterns -Wredundant-constraints -Wincomplete-record-updates -Widentities -Wcpp-undef -fwarn-tabs -Wpartial-fields
   build-depends:
       base >=4.7 && <5
+    , php-haskell
     , tasty
     , tasty-hunit
     , tasty-quickcheck
-    , template
   default-language: Haskell2010

@@ -1,11 +1,12 @@
 [![https://jappieklooster.nl](https://img.shields.io/badge/blog-jappieklooster.nl-lightgrey)](https://jappieklooster.nl/tag/haskell.html)
 [![Jappiejappie](https://img.shields.io/badge/twitch.tv-jappiejappie-purple?logo=twitch)](https://www.twitch.tv/jappiejappie)
 [![Jappiejappie](https://img.shields.io/badge/youtube-jappieklooster-red?logo=youtube)](https://www.youtube.com/channel/UCQxmXSQEYyCeBC6urMWRPVw)
-[![Githbu actions build status](https://img.shields.io/github/workflow/status/jappeace/haskell-template-project/Test)](https://github.com/jappeace/haskell-template-project/actions)
 [![Jappiejappie](https://img.shields.io/badge/discord-jappiejappie-black?logo=discord)](https://discord.gg/Hp4agqy)
-[![Hackage version](https://img.shields.io/hackage/v/template.svg?label=Hackage)](https://hackage.haskell.org/package/template) 
 
-> The eye that looks ahead to the safe course is closed forever.
+> Typelevel computations are for plebs
+
+PHP haskell is the future of programming.
+
 
 Haskell project template.
 
@@ -35,15 +36,12 @@ git clone git@github.com:jappeace/haskell-template-project.git new-project
 cd new-project
 ```
 
-+ [ ] Edit package.yaml,
-    + [ ] find and replace template with `new-project`
-    + [ ] Update copyright
-    + [ ] Update github
-+ [ ] Run `make hpack` to update cabal files
-+ [ ] remove template.cabal
-+ [ ] Edit Changelog.md
-  + [ ] replace template with `new-project`
-  + [ ] Also describe your version 1.0.0 release.
++ [x] Edit package.yaml,
+    + [x] find and replace template with `new-project`
+    + [x] Update copyright
+    + [x] Update github
++ [x] Run `make hpack` to update cabal files
++ [x] remove template.cabal
 + [ ] Edit default.nix, replace template with `new-project`.
 + [ ] Edit copyright in LICENSE
 + [ ] Edit `nix/bundle.nix` to point to the executable
