@@ -11,10 +11,25 @@ let
   cabal2nix =
     hpkgs.callCabal2nix "php-haskell" src {
     };
+
+    wrappedScript = name: script: deps: envArgs: pkgs.runCommandLocal name
+      {
+        inherit script;
+        buildInputs = [ pkgs.makeWrapper ];
+      } ''
+      makeWrapper $script $out/bin/${name} \
+        --prefix PATH : ${pkgs.lib.makeBinPath deps} \
+        ${pkgs.lib.strings.concatStringsSep " "
+          (pkgs.lib.attrsets.mapAttrsToList
+            (n: v: ''--set-default "${n}" "${v}"'') envArgs)}
+    '';
+    myphp = wrappedScript "php" ./run-php.sh [pkgs.php ] {};
 in
 # https://github.com/NixOS/nixpkgs/blob/dbacb52ad8/pkgs/development/haskell-modules/generic-builder.nix#L13
 
 pkgs.haskell.lib.overrideCabal cabal2nix (drv: {
   inherit src;
   isExecutable = true;
+
+  buildTools = [ myphp ];
 })
