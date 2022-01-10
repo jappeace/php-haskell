@@ -5,4 +5,4 @@
 
 > Typelevel computations are for plebs
 
-PHP haskell is the future of programming.
+You can't hurt me! I flagellate myself 10'000 times per day
